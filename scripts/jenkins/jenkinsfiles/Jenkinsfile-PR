@@ -1,4 +1,4 @@
-@Library('test-shared-library') _
+@Library('test-shared-library@mr/ita/190-build-summary-emailer') _
 
 def DEFAULT_NODE_LABEL = 'docker && !mr-0xc8'
 
