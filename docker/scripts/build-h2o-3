@@ -14,7 +14,7 @@ cd h2o-3
 
 echo '###### Build H2O-3 ######'
 printenv
-make -f docker/Makefile.jenkins warmup-caches
+make -f scripts/jenkins/Makefile.jenkins warmup-caches
 
 echo '###### Cleanup ######'
 rm -rf ~/h2o-3
