@@ -455,6 +455,11 @@ public abstract class Model<M extends Model<M,P,O>, P extends Model.Parameters, 
     }
   }
 
+  public static class InteractionSpecPair extends Iced {
+    String _column_a;
+    String _column_b;
+  }
+
   /** Model-specific output class.  Each model sub-class contains an instance
    *  of one of these containing its "output": the pieces of the model needed
    *  for scoring.  E.g. KMeansModel has a KMeansOutput extending Model.Output
@@ -2032,7 +2037,7 @@ public abstract class Model<M extends Model<M,P,O>, P extends Model.Parameters, 
    *     this does not appear here, but in the InteractionWrappedVec class
    *  TODO: refactor the CreateInteractions to be useful here and in InteractionWrappedVec
    */
-  public static class InteractionPair extends Iced {
+  public static class InteractionPair extends Iced<InteractionPair> {
     public int vecIdx;
     private int _v1,_v2;
 

@@ -164,6 +164,9 @@ public class GLMV3 extends ModelBuilderSchema<GLM,GLMV3,GLMV3.GLMParametersV3> {
     @API(help="A list of predictor column indices to interact. All pairwise combinations will be computed for the list.", direction=Direction.INPUT, level=Level.expert)
     public String[] interactions;
 
+    @API(help="A list of pairwise (first order) column interactions.", direction=Direction.INPUT, level=Level.expert)
+    public InteractionPairV3[] interaction_pairs;
+
     // dead unused args, formely inherited from supervised model schema
     /**
      * For imbalanced data, balance training data class counts via
