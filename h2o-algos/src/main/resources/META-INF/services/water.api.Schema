@@ -73,6 +73,7 @@ hex.schemas.Word2VecSynonymsV3
 hex.schemas.Word2VecTransformV3
 hex.schemas.Word2VecV3
 hex.schemas.Word2VecV3$Word2VecParametersV3
+hex.schemas.InteractionSpecPairV3
 water.api.ModelMetricsGLRMV99
 water.api.ModelMetricsPCAV3
 water.api.ModelMetricsSVDV99

@@ -57,6 +57,7 @@ public class GLMV3 extends ModelBuilderSchema<GLM,GLMV3,GLMV3.GLMParametersV3> {
             "beta_constraints",
             "max_active_predictors",
             "interactions",
+            "interaction_pairs",
             // dead unused args forced here by backwards compatibility, remove in V4
             "balance_classes",
             "class_sampling_factors",
@@ -165,7 +166,7 @@ public class GLMV3 extends ModelBuilderSchema<GLM,GLMV3,GLMV3.GLMParametersV3> {
     public String[] interactions;
 
     @API(help="A list of pairwise (first order) column interactions.", direction=Direction.INPUT, level=Level.expert)
-    public InteractionPairV3[] interaction_pairs;
+    public InteractionSpecPairV3[] interaction_pairs;
 
     // dead unused args, formely inherited from supervised model schema
     /**
