@@ -1,6 +1,6 @@
-def call(final context, final String mode, final String commitMessage, final List<String> changes, final boolean ignoreChanges) {
+def call(final context, final String mode, final String commitMessage, final List<String> changes, final boolean ignoreChanges, final boolean buildHadoop, final List<String> distributionsToBuild) {
   def buildConfig = new BuildConfig()
-  buildConfig.initialize(context, mode, commitMessage, changes, ignoreChanges)
+  buildConfig.initialize(context, mode, commitMessage, changes, ignoreChanges, buildHadoop, distributionsToBuild)
   return buildConfig
 }
 
@@ -140,6 +140,10 @@ class BuildConfig {
 
   String getDefaultImageVersion() {
     return DEFAULT_IMAGE_VERSION_TAG
+  }
+
+  String getHadoopImageVersion() {
+    return HADOOP_IMAGE_VERSION_TAG
   }
 
   private void detectChanges(List<String> changes) {

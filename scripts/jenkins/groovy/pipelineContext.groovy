@@ -20,7 +20,7 @@ def call(final String h2o3Root, final String mode, final scmEnv, final boolean i
 
     return new PipelineContext(
             buildConfigFactory(this, mode, env.COMMIT_MESSAGE, getChanges(h2o3Root), ignoreChanges, buildHadoop,
-                    pipelineUtils.readSupportedHadoopDistributions(context, buildinfoPath)
+                    pipelineUtils.readSupportedHadoopDistributions(this, buildinfoPath)
             ),
             buildSummaryFactory(true),
             pipelineUtils,
