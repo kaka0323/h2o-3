@@ -432,13 +432,15 @@ public abstract class Model<M extends Model<M,P,O>, P extends Model.Parameters, 
 
   public static class InteractionSpec extends Iced {
     private String[] _columns;
+    private InteractionSpecPair[] _pairs;
 
-    private InteractionSpec(String[] columns) {
+    public InteractionSpec(String[] columns, InteractionSpecPair[] pairs) {
       _columns = columns;
+      _pairs = pairs;
     }
 
     public static InteractionSpec allPairwise(String[] columns) {
-      return columns != null ? new InteractionSpec(columns) : null;
+      return columns != null ? new InteractionSpec(columns, null) : null;
     }
 
     public Model.InteractionPair[] makeInteractionPairs(Frame f) {
